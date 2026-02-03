@@ -22,7 +22,16 @@ import cmd
 
 class MyCLI(cmd.Cmd):
     prompt = '[;-)]:'
-    intro = 'Welcome to MyCLI. Type "help" for available commands.'
+    intro = '''
+/* .-----------------------------------------------------------------------------. */
+/* |      ooooooo8      o      oooooooooo  oooooooooo ooooo       ooooooooooo    | */
+/* |    o888    88     888      888    888  888    888 888         888    88     | */
+/* |    888    oooo   8  88     888oooo88   888oooo88  888         888ooo8       | */
+/* |    888o    88   8oooo88    888  88o    888    888 888      o  888    oo     | */
+/* |     888ooo888 o88o  o888o o888o  88o8 o888ooo888 o888ooooo88 o888ooo8888    | */
+/* '-----------------------------------------------------------------------------' */
+
+'''
 
     def do_hello(self, line):
         """Print a greeting."""
