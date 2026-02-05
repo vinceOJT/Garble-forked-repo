@@ -69,10 +69,9 @@ class Encrypt:
             # print(self.special_key_storage)
             print(self.final_list_encryption)
             print(self.store_encrypted_int)
-            print(self.remainder_process)
             print(self.special_key_storage)
             print(self.encrypted)
-            save_user_data(self.final_list_encryption, self.remainder_process, self.store_encrypted_int,
+            save_user_data(self.final_list_encryption, self.store_encrypted_int,
                         self.special_key_storage, self.encrypted )
         return(f"ENCRYPTED: {' '.join(self.final_list_encryption)}")
             
