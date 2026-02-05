@@ -8,18 +8,20 @@ remainder_process = [0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0,
 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 
 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0]
 store_encrypted_int = 69
+special_key_storage = 663
+encrypted = [747, 767, 768, 778, 695, 768, 778, 695, 760, 695, 778, 764, 762, 777, 764, 779, 695, 772, 764, 778, 778, 760, 766, 764, 695, 765, 777, 774, 772, 695, 781, 768, 773, 762, 764, 721, 695, 775, 774, 779, 760, 779, 774]
 
 
 class Decryption:
-    def __init__(self, final_list_encryption,store_encrypted_int, remainder_process):
+    def __init__(self, final_list_encryption,store_encrypted_int, remainder_process,
+                 special_key_storage, encrypted):
         self.final_list_encryption = final_list_encryption
         self.remainder_process = remainder_process
         self.store_encrypted_int = store_encrypted_int
-        
+        self.special_key_storage = special_key_storage
+        self.encrypted = encrypted
         self.__store_data_D()
     def __store_data_D(self):
-        self.special_key_storage = 663
-        self.encrypted = [747, 767, 768, 778, 695, 768, 778, 695, 760, 695, 778, 764, 762, 777, 764, 779, 695, 772, 764, 778, 778, 760, 766, 764, 695, 765, 777, 774, 772, 695, 781, 768, 773, 762, 764, 721, 695, 775, 774, 779, 760, 779, 774]
         self.store_final_conversion  = []
         self.limit = 0
 
@@ -79,7 +81,7 @@ class Decryption:
             return (f"DECRYPTED: {' '.join(map(chr, self.store_final_conversion))}")
 
 
-sol = Decryption(final_list_encryption,store_encrypted_int, remainder_process)
+sol = Decryption(final_list_encryption,store_encrypted_int, remainder_process, special_key_storage, encrypted)
 (sol.decryption_of_list())
 (sol.list_number_decryption(sol.decryption_of_list()))
 print(sol.final_decryption()) #need output

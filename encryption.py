@@ -1,7 +1,7 @@
 dictionary_encryption = {'0': 'K', '1': 'R', '2': 'B', '3': 'X', '4': 'Z', '5': 'A', '6': 'P', '7': 'M', '8': 'W', '9': 'Q'}
 dictionary_decryption = {'K': '0', 'R': '1', 'B': '2', 'X': '3', 'Z': '4', 'A': '5', 'P': '6', 'M': '7', 'W': '8', 'Q': '9'}
 
-
+from save import save_user_data
 # special_key = input("What will be the secret key (secret key, peacock, lions main): ")
 # secret_word = input("What message would you like encrypted:  ")
 
@@ -65,7 +65,15 @@ class Encrypt:
             pos_1 += 2
             pos_2 += 2
             
-
+        print("_____________________")
+        # print(self.special_key_storage)
+        print(self.final_list_encryption)
+        print(self.store_encrypted_int)
+        print(self.remainder_process)
+        print(self.special_key_storage)
+        print(self.encrypted)
+        save_user_data(self.final_list_encryption, self.remainder_process, self.store_encrypted_int,
+                       self.special_key_storage, self.encrypted )
         return(f"ENCRYPTED: {' '.join(self.final_list_encryption)}")
             
 
@@ -111,13 +119,6 @@ class Encrypt:
         self.store_final_conversion = [int(x) for x in final_seperation]
         # need these 3 values to be passed so that decryption will work
 
-        print("_____________________")
-        print(store_converted)
-        print(self.final_list_encryption)
-        print((self.store_encrypted_int))
-        print(self.remainder_process)
-        print(self.special_key_storage)
-        print(self.encrypted)
 
     
 

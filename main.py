@@ -1,6 +1,3 @@
-import json
-import os
-from pathlib import Path
 from encryption import Encrypt
 
 
@@ -13,8 +10,7 @@ class MyCLI(cmd.Cmd):
 
     def __init__(self):
         self.file_path = "C:\\Users\\Username\\Documents\\example.txt"
-        self.in_garble = f"""\nWhen using garble, make sure to inlcude the file you want to encryp at the very end of the file path.
-          \n E.G: '{ self.file_path} \n
+        self.in_garble = f"""\nWhen using garble, make sure to inlcude the file you want to encryp at the very end of the file path. \nE.G: '{ self.file_path} \n
         """
 
         super().__init__()
@@ -44,7 +40,7 @@ A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW 
     def do_hello(self, line):
         """Print a greeting."""
         print("Hello, World!")
-
+        
     def do_quit(self, line):
         """Exit the CLI."""
         return True
@@ -87,25 +83,3 @@ if __name__ == '__main__':
 
 
 
-
-
-# # This creates a path to: C:\Users\<YourUser>\AppData\Local\MyCoolApp
-# # It's 'deep', safe, and won't affect the PC's performance.
-# app_dir = Path(os.getenv('LOCALAPPDATA')) / "MyCoolApp"
-
-# # Create the directory if it doesn't exist
-# app_dir.mkdir(parents=True, exist_ok=True)
-
-# file_path = app_dir / "user_data.json"
-
-# data_to_save = {
-#     "username": "johndoe",
-#     "logins": 42,
-#     "active": True
-# }
-
-# # Save the data
-# with open(file_path, 'w') as f:
-#     json.dump(data_to_save, f)
-
-# print(f"File saved deeply at: {file_path}")
