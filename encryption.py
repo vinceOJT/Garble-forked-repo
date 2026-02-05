@@ -64,7 +64,7 @@ class Encrypt:
                     self.final_list_encryption.extend([(itteration_conversion_str[pos_1])]+ [(itteration_conversion_str[pos_2])]  )
             pos_1 += 2
             pos_2 += 2
-        
+            
 
         return(f"ENCRYPTED: {' '.join(self.final_list_encryption)}")
             
@@ -111,12 +111,13 @@ class Encrypt:
         self.store_final_conversion = [int(x) for x in final_seperation]
         # need these 3 values to be passed so that decryption will work
 
-        # print("_____________________")
-        # print(store_converted)
-        # print(self.final_list_encryption)
-        # print((self.store_encrypted_int))
-        # print(self.remainder_process)
-        # print(self.encrypted)
+        print("_____________________")
+        print(store_converted)
+        print(self.final_list_encryption)
+        print((self.store_encrypted_int))
+        print(self.remainder_process)
+        print(self.special_key_storage)
+        print(self.encrypted)
 
     
 
