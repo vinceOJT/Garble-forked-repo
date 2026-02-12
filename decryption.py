@@ -87,12 +87,16 @@ class Decryption:
     def final_decryption(self):
         for val in self.encrypted:
             char_code = int(val) - int(self.special_key_storage)
-       
             self.decrypted_chars.append(chr(char_code))
- 
-        question = input(f"{self.BLUE}(-U-): {self.RESET}Decrypt (Y/N) if N all data will be lost: ").upper()
-        if question == "Y":
-            return (f"DECRYPTED: {''.join(self.decrypted_chars)}")
+            
+        path = input(f"{self.BLUE}(-U-): {self.RESET} file directory of the encrypted file:").upper()
+        if not path:
+            return ("Please input the file path of the encrypted file")
+        else:
+            with open(path, "w") as f:
+                f.write(''.join(self.decrypted_chars))
+            return(f"{self.BLUE} DONE CHECK FILE. {self.RESET}")
+                
             
         
 

@@ -1,6 +1,5 @@
 from encryption import Encrypt
-from main_dec import decrypt_head
-
+from main_dec import DecryptHead
 import cmd
 # path = r"C:\Users\USER\Documents\Codes\python projs\crypt\New folder\test.txt"
 # C:\Users\OJTVince\Documents\njs front\test.txt
@@ -72,6 +71,7 @@ A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW 
             value = (sol.final_encryption()) #need output
             with open(path, "w") as f:
                 f.write(value)
+            
             # (sol.decryption_of_list())
             # (sol.list_number_decryption(sol.decryption_of_list()))
             # print(sol.final_decryption()) #need output
@@ -79,8 +79,14 @@ A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW 
             print(f"Invalid input EXITING. Rerun 'garble' and try a similar file path as this: {self.file_path}")
 
     def do_ungarble(self, line):
-        decrypt_head()
-        
+        """File Decryption"""
+        try:
+            sol = DecryptHead()
+            sol.decrypt_head()
+        except Exception as e:
+            print(f"ERROR: {e}")
+
+    
         
 if __name__ == '__main__':
     MyCLI().cmdloop()
