@@ -5,7 +5,7 @@ from encryption import Encrypt
 from dec_head import DecryptHead
 import cmd
 # path = r"C:\Users\USER\Documents\Codes\python projs\crypt\New folder\test.txt"
-# C:\Users\OJTVince\Documents\njs front\test.txt
+# C:\Users\Documents\njs front\test.txt
 
 
 
@@ -61,6 +61,7 @@ A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW 
         
         try:
             path = input(rf"{self.RED}(0_0): {self.RESET}") 
+            
             special_key = input(f"{self.RED}Enter a special key words/numbers/sentence/special characters\n(0_0): {self.RESET}")  
             
             with open(path, 'r') as f:

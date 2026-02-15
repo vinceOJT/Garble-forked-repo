@@ -11,18 +11,18 @@ def save_user_data(enc_list, enc_int, enc_storage, enc_enc):
     app_dir.mkdir(parents=True, exist_ok=True)
 
     file_path = app_dir / "user_data.json"
+    string_path = str(app_dir)
 
     data_to_save = {
         "final_list_encryption": enc_list,
         "store_encrypted_int": enc_int,
         "special_key_storage": enc_storage,
         "encrypted": enc_enc,
+        "secret_pat": string_path,
     }
 
     # Save the data
     with open(file_path, 'w') as f:
         json.dump(data_to_save, f)
-
-    print(f"File saved deeply at: {file_path}")
-
+    print(f"File saved deeply asssssssssst: {string_path}")
 
