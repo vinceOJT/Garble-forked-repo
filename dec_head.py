@@ -19,6 +19,5 @@ class DecryptHead():
             encrypted = words['encrypted']
             specialKey = words['special_key']
         
-            print(specialKey)
             sol = Decryption(final_list_encryption, store_encrypted_int, special_key_storage, encrypted, specialKey)
             print(sol.final_decryption()) #need output

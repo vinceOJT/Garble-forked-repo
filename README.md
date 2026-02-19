@@ -14,6 +14,9 @@
 ███████╗██║ ╚████║╚██████╗██║  ██║   ██║   ██║        ██║   ██║╚██████╔╝██║ ╚████║
 ╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝                                                                                                                                                       
 A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW AT YOU SYSTEM (0v0):
+
+THE DECRYPTION ONLY WORKS ON THE SYSTEM IT'S BEING ENCRYPTED ON BECAUSE WITHIN THE CODE SOME OF THE DATA BEING STORED IS WITHIN YOUR SYSTEM, BURRIED DEEP DOWN YOUR SYSTEM
+
 ```
 ### Installation
 Clone the repository to your local machine:
