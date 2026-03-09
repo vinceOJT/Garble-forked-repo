@@ -1,5 +1,4 @@
 # Garble Encryption
-<img width="1389" height="799" alt="Screenshot 2026-03-10 062157" src="https://github.com/user-attachments/assets/aee2b740-0f75-44f2-90b6-8ef588850b0d" />
 ```
  ██████╗  █████╗ ██████╗ ██████╗ ██╗     ███████╗                                   
 ██╔════╝ ██╔══██╗██╔══██╗██╔══██╗██║     ██╔════╝                                   
@@ -19,6 +18,10 @@ A CLI TOOL MADE FOR ENCRYPTING FILE CREATED BY ZEEKHOFT AS A SIMPLE PROJECT NOW 
 THE DECRYPTION ONLY WORKS ON THE SYSTEM IT'S BEING ENCRYPTED ON BECAUSE WITHIN THE CODE SOME OF THE DATA BEING STORED IS WITHIN YOUR SYSTEM, BURRIED DEEP DOWN YOUR SYSTEM
 
 ```
+### Sample View
+<img width="1389" height="799" alt="Screenshot 2026-03-10 062157" src="https://github.com/user-attachments/assets/aee2b740-0f75-44f2-90b6-8ef588850b0d" />
+
+
 ### Installation
 Clone the repository to your local machine:
 
